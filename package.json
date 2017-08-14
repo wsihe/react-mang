@@ -1,28 +1,29 @@
 {
-  "name": "pxq",
+  "name": "react-many",
   "version": "1.0.1",
   "description": "react-demo",
   "main": "index.html",
   "scripts": {
-    "dev": "node server.js",
-    "hot": "node server_hot.js",
-    "dist": "webpack --config webpack.config.dist.js --progress --colors --watch -p"
+    "dev": "node build/dev-server.js",
+    "hot": "node build/server_hot.js",
+    "build": "webpack --config build/webpack.prod.conf.js --progress --colors --watch -p"
   },
   "repository": {
     "type": "github",
-    "url": "https://github.com/bailicangdu/pxq"
+    "url": "https://github.com/wsihe/react-many"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bailicangdu/pxq/issues"
+    "url": "https://github.com/wsihe/react-many/issues"
   },
-  "homepage": "https://github.com/bailicangdu/pxq#readme",
+  "homepage": "https://github.com/wsihe/react-many#readme",
   "dependencies": {
     "github-markdown-css": "^2.4.0",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "normalize.css": "^4.1.1",
+    "prop-types": "^15.5.10",
     "pure-render-decorator": "^1.2.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

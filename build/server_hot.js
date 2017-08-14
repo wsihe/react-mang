@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var express = require('express');
-var config = require('../build/webpack.config.hot');
+var config = require('../build/webpack.hot.conf');
 var proxyMiddleware = require('http-proxy-middleware')
 
 var app = express();
@@ -27,7 +27,7 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 //将其他路由，全部返回index.html
 app.get('*', function(req, res) {
-	res.sendFile(__dirname + '/index.html')
+	res.sendFile(__dirname + '../index.html')
 });
 
 app.listen(8088, function() {

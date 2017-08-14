@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
-var config = require('../build/webpack.config.dev');
+var config = require('../build/webpack.dev.conf');
 
 //代理服务器
 var proxy = [{
@@ -20,7 +20,7 @@ var server = new WebpackDevServer(webpack(config), {
 
 //将其他路由，全部返回index.html
 server.app.get('*', function(req, res) {
-	res.sendFile(__dirname + '/index.html')
+	res.sendFile(__dirname + '../index.html')
 });
 server.listen(8088, function() {
 	console.log('正常打开8088端口')

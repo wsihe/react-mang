@@ -11,17 +11,6 @@ var proxyTable = config.dev.proxyTable
 var server = express()
 var compiler = webpack(webpackConfig)
 
-// server.use(require('webpack-dev-middleware')(compiler, {
-// 	publicPath: webpackConfig.output.publicPath,
-// 	hot: true,
-// 	historyApiFallback: true,
-// 	inline: true,
-// 	progress: true,
-// 	stats: {
-// 		colors: true,
-// 	}
-// }));
-
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
 	publicPath: webpackConfig.output.publicPath,
 	quiet: true
@@ -38,13 +27,6 @@ compiler.plugin('compilation', function (compilation) {
 	})
 })
 
-// server.use('/shopro', proxyMiddleware({
-//     target: 'http://cangdu.org',
-//     changeOrigin: true,
-// }))
-
-// server.use(require('webpack-hot-middleware')(compiler));
-// proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
 	var options = proxyTable[context]
 	if (typeof options === 'string') {
@@ -88,10 +70,3 @@ module.exports = {
 		server.close()
 	}
 }
-
-
-
-// server.listen(8088, function() {
-// 	var uri = 'http://localhost:8088'
-// 	opn(uri)
-// });

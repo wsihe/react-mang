@@ -13,7 +13,16 @@ export const GET_DATA_START = 'GET_DATA_START'
 export const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS'
 export const TEST_DISPATCH = 'TEST_DISPATCH'
 
-
+//生成 action creator 的函数
+function makeActionCreator(type, ...argNames) {
+	return function(...args) {
+		let action = { type }
+		argNames.forEach((arg, index) => {
+			action[argNames[index]] = args[index]
+		})
+		return action
+	}
+}
 
 //开始获取数据
 const requestPosts = path => {

@@ -47,6 +47,10 @@ module.exports = {
             exclude: /^node_modules$/,
             loader: ExtractTextPlugin.extract('style', ['css', 'autoprefixer', 'sass'])
         }, {
+            test: /\.styl$/,
+            exclude: /^node_modules$/,
+            loader: ExtractTextPlugin.extract('style', ['css', 'autoprefixer', 'styl'])
+        }, {
             test: /\.(eot|woff|svg|ttf|woff2|gif|appcache)(\?|$)/,
             exclude: /^node_modules$/,
             loader: 'file-loader?name=[name].[ext]'
@@ -70,11 +74,11 @@ module.exports = {
             filename: '../index.html',
             template: './src/template/index.html',
             inject: 'body',
-            hash: true,
+            hash: true
         }),
         new ExtractTextPlugin('[name].css'),
         //提取出来的样式和common.js会自动添加进发布模式的html文件中，原来的html没有
-        // new webpack.optimize.CommonsChunkPlugin("common", "common.bundle.js"),
+        new webpack.optimize.CommonsChunkPlugin("common", "common.bundle.js"),
         new webpack.optimize.UglifyJsPlugin({
             output: {
                 comments: false, // remove all comments
@@ -85,6 +89,6 @@ module.exports = {
         })
     ],
     resolve: {
-        extensions: ['', '.js', '.jsx', '.less', '.scss', '.css']
+        extensions: ['', '.js', '.jsx', '.less', '.scss', '.css', '.styl']
     }
 };

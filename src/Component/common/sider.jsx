@@ -1,4 +1,5 @@
 import React from 'react';
+var classNames = require('classnames');
 import {Link, IndexLink} from 'react-router';
 import {is, fromJS} from 'immutable';
 

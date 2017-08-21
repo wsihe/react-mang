@@ -1,0 +1,127 @@
+/********************************
+ * @file  sider样式
+ ********************************/
+.sidebar
+  position absolute
+  top 60px
+  left 0
+  bottom 0
+  background #d8e2ee
+  .sidebar-flex
+    position relative
+    top 0
+    display inline-block
+    width 50px
+    .sidebar__item
+      position relative
+      height 50px
+      line-height 50px
+      background #b4d0ee
+      border-bottom 1px solid $color_dark_white
+      &:first-child
+        &:hover
+          background $color_dark_blue
+      &:hover, &.active
+        background $color_dark_blue
+      .icon
+        position absolute
+        top 0
+        right 0
+        padding 14px 15px
+        height 22px
+        display inline-block
+        as-button()
+      .menu
+        position absolute
+        top 0px
+        left 50px
+        color $color_white
+        background $color_dark_blue
+        z-index 9999
+        &__list
+          position relative
+          padding 0 32px
+          font-size 14px
+          white-space nowrap
+          &:hover
+            background $color_light_blue
+  .sidebar-expand
+    position relative
+    top 0
+    width 200px
+    .sidebar__item_nav
+      position absolute
+      top 0
+      right 0
+      width 51px
+      height 50px
+      line-height 50px
+      color $color_white
+      background #b4d0ee
+      z-index 999
+      .icon
+        position absolute
+        top 0 !important
+        margin-right 0 !important
+        right 0
+        padding 14px 15px
+        height 22px
+        display inline-block
+        as-button()
+    .sidebar__item
+      border-bottom 1px solid $color_dark_white
+    .sidebar__parent
+      position relative
+      padding 0 20px 0 15px
+      color $color_light_black
+      font-size 16px
+      height 50px
+      line-height 50px
+      as-button()
+      background #b4d0ee
+      .icon
+        position relative
+        top 5px
+        margin-right 18px
+        width 22px
+        height 22px
+        display inline-block
+      .icon-expand
+        display block
+        position absolute
+        right 15px
+        top 21px
+        set-icon 15px 8px "sidebar/icon-menu-collapse.png"
+    .sidebar__item.active
+      border-bottom none
+      .sidebar__parent
+        color $color_white
+        background $color_dark_blue
+        .icon-expand
+          set-icon 15px 8px "sidebar/icon-menu-expand.png"
+      .sidebar__item_nav
+        background $color_dark_blue
+    .menu
+      background #d8e2ee
+      &__list
+        position relative
+        padding 0 15px 0 52px
+        font-size 14px
+        color #666
+        height 40px
+        line-height 40px
+        white-space nowrap
+        overflow hidden
+        as-button()
+        &:hover, &.active
+          color #2f92d1
+          &::before
+            position absolute
+            content ""
+            width 8px
+            height 8px
+            border 1px solid #0f75b7
+            border-radius 100%
+            left 32px
+            bottom 15px
+            background #0f75b7

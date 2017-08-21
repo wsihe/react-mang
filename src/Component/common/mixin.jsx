@@ -1,22 +1,11 @@
-import React, {Component, PropTypes} from 'react';
+import React from 'react';
 import { Link, IndexLink } from 'react-router';
-import pureRender from 'pure-render-decorator';
 import { is, fromJS} from 'immutable';
-import { Tool } from '../../Config/Tool';
 import template from './template';
 export {template}
 
-/**
- * 公共头部
- *
- * @export
- * @class Header
- * @extends {Component}
- */
-
-
-export class Header extends Component {  //头部标题
-     constructor(props,context) {
+export class Header extends React.Component {  //头部标题
+    constructor(props,context) {
         super(props,context);
         this.state = {
             showHide :'none', // 显示右侧菜单，默认隐藏
@@ -77,25 +66,7 @@ export class Header extends Component {  //头部标题
         }
 
         return (
-            <header className="head-list" style={indexNavStyle}>
-                {nav}
-                {goback}
-
-                {
-                    saleRecord&&<Link to="/saleRecord" className='head_icon_right'></Link>
-                }
-
-                {
-                    title&&<span className='head_title'>{title}</span>
-                }
-
-                {
-                    save&&<Link to={'/index'+params} className='head_save right'>确定</Link>
-                }
-
-                {
-                    applyRecord&&<Link to="/applyRecord" className='head_icon_right head_applyrecord_right'></Link>
-                }
+            <header className="head-list"   >
             </header>
         );
     }

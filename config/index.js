@@ -3,7 +3,7 @@ var path = require('path')
 
 module.exports = {
   dev: {
-    port: 3003,
+    port: 3004,
 	assetsSubDirectory: 'static',
 	assetsPublicPath: '/',
     proxyTable: {

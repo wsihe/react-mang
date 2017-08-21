@@ -1,0 +1,45 @@
+@import "./reset.styl"
+@import "./common.styl"
+@import "./define.styl"
+@import "./head.styl"
+@import "./sider.styl"
+@import "./tab.styl"
+
+
+.main__content
+  position absolute
+  top 60px
+  left 200px
+  right 0
+  bottom 0
+  background #e7eef3
+  .tab__container
+    padding 0 20px
+    background #d8e2ee
+    height 32px
+    overflow hidden
+    .tab__item
+      display inline-block
+      width 150px
+      height 32px
+      color #666
+      line-height 32px
+      text-align center
+      background #b4d1ee
+      &--active
+        background #e7eef3
+      .el-icon-close
+        font-size 8px
+        font-weight 200
+  .main__container
+    position absolute
+    top 30px
+    bottom 0
+    right 0
+    left 0
+    margin 20px
+    padding 20px
+    overflow auto
+    min-width 984px
+    background $color_white
+    border-top 2px solid $color_dark_blue

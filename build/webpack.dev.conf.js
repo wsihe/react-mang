@@ -49,6 +49,11 @@ module.exports = {
             loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader',
             include: [APP_PATH]
         }, {
+          test: /\.styl$/,
+            exclude: /^node_modules$/,
+            loader: 'style-loader!css-loader!autoprefixer-loader!stylus-loader',
+            include: [APP_PATH]
+        }, {
             test: /\.(eot|woff|svg|ttf|woff2|gif|appcache)(\?|$)/,
             exclude: /^node_modules$/,
             loader: 'file-loader?name=[name].[ext]',
@@ -81,6 +86,6 @@ module.exports = {
 		}),
     ],
     resolve: {
-        extensions: ['', '.js', '.jsx', '.less', '.scss', '.css'],
+        extensions: ['', '.js', '.jsx', '.less', '.scss', '.css', '.styl'],
     }
 };

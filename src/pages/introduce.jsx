@@ -2,11 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import {is, fromJS} from 'immutable';
 import {Tool} from '../Config/Tool';
-import template from './common/template';
-import Header from './common/head';
-import Sider from './common/sider';
-import MainTab from './common/tab';
-
+import template from '../Component/common/template';
 
 class Main extends React.Component {
   constructor() {
@@ -37,14 +33,8 @@ class Main extends React.Component {
   render() {
     // let products = this.state.products;
     return (
-      <div className="main-page">
-        <Header title=''/>
-        <Sider />
-        <div className="main__content">
-          <MainTab />
-          <div className="main__container">
-          </div>
-        </div>
+      <div className="page">
+        <p>introduce</p>
       </div>
     )
   }

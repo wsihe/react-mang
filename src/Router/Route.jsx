@@ -6,11 +6,11 @@ import index from '../pages/introduce'; //销售录入
 
 const history = process.env.NODE_ENV !== 'production' ? browserHistory : hashHistory;
 
-// const helpCenter = (location, callback) => {
-//     require.ensure([], require => {
-//       callback(null, require('../Component/helpCenter').default)
-//     },'helpCenter')
-// }
+const colorDemo = (location, callback) => {
+    require.ensure([], require => {
+      callback(null, require('../pages/color').default)
+    },'colorDemo')
+}
 
 
 const RouteConfig = (
@@ -18,7 +18,7 @@ const RouteConfig = (
         <Route path="/" component={MainLayout}>
             <IndexRoute component={index} />
             <Route path="index" component={index} />
-            {/*<Route path="helpCenter" getComponent={helpCenter} />*/}
+            <Route path="color" getComponent={colorDemo} />
             <Redirect from='*' to='/'  />
         </Route>
     </Router>

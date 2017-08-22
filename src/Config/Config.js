@@ -1,4 +1,4 @@
-import FastClick from './fastclick.js';
+// import FastClick from './fastclick.js';
 ((doc, win) => {
   const docEl = doc.documentElement,
     resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
@@ -14,11 +14,11 @@ import FastClick from './fastclick.js';
 })(document, window);
 
 
-if ('addEventListener' in document) {
-  document.addEventListener('DOMContentLoaded', function() {
-    FastClick.attach(document.body);
-  }, false);
-}
+// if ('addEventListener' in document) {
+//   document.addEventListener('DOMContentLoaded', function() {
+//     FastClick.attach(document.body);
+//   }, false);
+// }
 
 
 const system = (() => {

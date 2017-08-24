@@ -19,7 +19,7 @@ class MainTab extends React.Component {
                   </div>
               </div>
               <div className="tab__item">
-                  <span className="tab__title">Pagination-分页</span>
+                  <span className="tab__title">Color-色彩</span>
                   <div title="关闭页面" className="tab-close">
                       <div className="close-icon"></div>
                   </div>

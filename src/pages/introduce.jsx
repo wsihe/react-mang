@@ -34,7 +34,8 @@ class Main extends React.Component {
     // let products = this.state.products;
     return (
       <div className="page">
-        <p>introduce</p>
+        <h1>react-many</h1>
+        <p>Many pages for react (React多页签应用)</p>
       </div>
     )
   }

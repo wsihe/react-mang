@@ -3,7 +3,7 @@
 
 ### 技术栈：
 
-react  + redux + react-router + immutable + stylus + ES6/7 + webpack + fetch
+react  + redux + react-router + stylus + ES6/7 + webpack + fetch
 
 
 ### 下载
